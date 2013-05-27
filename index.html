@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>radio!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    	<div>
+    	<h1>nekej me jebe</h1>
+    </div>
+</div>    <div class="container">
+    	<div>
+    	<h1 data-bind="visible:sadMeVidis">sad me vidiš</h1>
+    </div>
+</div>
+
+<div class="container">
+    <!-- ko foreach: items -->
+<input type="radio" name="selection" data-bind="value: id, attr: {'id': 'item'+ id}, checked: $root.selected" />
+<label data-bind="text: name, attr:{'for':'item'+id}">
+</label>
+<!-- /ko -->
+<button class="btn" data-bind="click: clickMe">log selected</button>
+    </div>
+
+    
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script type='text/javascript' src='http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js'></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
